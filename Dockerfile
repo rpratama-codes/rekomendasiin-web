@@ -9,6 +9,7 @@ RUN composer install
 # this image is huge than the builder 
 # any recomendation to use php, apache, alpine
 FROM php:7.4.33-apache
+RUN docker-php-ext-install mysqli
 RUN a2enmod rewrite
 COPY --from=builder --chown=www-data:www-data /app /var/www/html
 USER www-data

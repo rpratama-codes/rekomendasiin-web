@@ -7,9 +7,12 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - 8080:80
+      - 3000:80
     environment:
-      - name=value
+      - DB_NAME=rekomendasiin
+      - DB_USER=root
+      - DB_PASS=good_password
+      - DB_HOST=db
 
   db:
     image: mysql:8.4.0

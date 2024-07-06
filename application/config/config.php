@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = getenv('BASE_PATH');
+$config['base_url'] = $_SERVER['SERVER_ADDR'];
 
 /*
 |--------------------------------------------------------------------------
