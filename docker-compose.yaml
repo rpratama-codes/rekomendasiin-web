@@ -27,7 +27,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # image: rekomendasiin:latest
     restart: always
+    depends_on:
+      - db
     ports:
       - 3000:80
     environment:
@@ -35,3 +38,4 @@ services:
       DB_NAME: rekomendasiin
       DB_USER: root
       DB_PASS: good_password
+      BASE_URL: http://localhost:3000/

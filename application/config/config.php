@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 
 // $config['base_url'] = $_SERVER['SERVER_ADDR'];
-// $config['base_url'] = 'http://rekomendasiin.local';
+$config['base_url'] = getenv('BASE_URL');
 
 /*
 |--------------------------------------------------------------------------
