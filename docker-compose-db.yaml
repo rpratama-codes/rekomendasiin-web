@@ -1,4 +1,4 @@
-name: rekomendasiin
+name: database
 
 services:
   db:
@@ -22,16 +22,3 @@ services:
       PMA_ARBITRARY: 1
     ports:
       - 8080:80
-
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: always
-    ports:
-      - 3000:80
-    environment:
-      DB_HOST: db
-      DB_NAME: rekomendasiin
-      DB_USER: root
-      DB_PASS: good_password
